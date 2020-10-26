@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercise4</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://use.fontawesome.com/d7d727877d.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header>
+        <!-- q2 -->
+        <img src="./images/gmail_logo.svg" alt="gmail_logo" width="150" height="auto">
+        <h1>Gmail</h1>
+      </header>
+
+      <main>
+        <!-- search form -->
+<!-- C: usato nav invece di 2 main.section per searchEmails e unreadEmails -->
+<!-- C: h2 invece di section per unreadEmails -->
+        <section id="searchEmails">
+          <form class="" action="index.html" method="post">
+            <input type="text" name="search" placeholder="Search">
+            <input type="submit" value="VAI">
+          </form>
+        </section>
+
+        <!--  unread email counter  -->
+        <!-- q4 -->
+        <section id="unreadEmails">
+          You have <span id="unreadEmails_counter">30</span> unread
+        </section>
+
+        <!-- emails -->
+        <section id="emails">
+
+<!-- C: usata una struttura tipo div.row e dentro div.col-left (input, star, subject) e div.col-right (body) -->
+          <div class="emails_container emails-highlighted">
+            <div class="emails_indicators">
+              <input type="checkbox" name="read">
+<!-- C: usato html entities invece di icona -->
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <span class="emails_subject">Questo è l'oggetto della mail lungo</span>
+            <span class="emails_body">Testo della mail oidfjdfoijdoifjdoi</span>
+          </div>
+
+          <div class="emails_container emails-highlighted">
+            <div class="emails_indicators">
+              <input type="checkbox" name="read">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <span class="emails_subject">Oggetto corto</span>
+            <span class="emails_body">Testo della mail</span>
+          </div>
+
+          <div class="emails_container">
+            <div class="emails_indicators">
+              <input type="checkbox" name="read">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <span class="emails_subject">Oggetto corto</span>
+            <span class="emails_body">Testo della mail</span>
+          </div>
+
+          <div class="emails_container emails-highlighted">
+            <div class="emails_indicators">
+              <input type="checkbox" name="read">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <span class="emails_subject">Oggetto corto</span>
+            <span class="emails_body">Testo della mail</span>
+          </div>
+
+          <div class="emails_container">
+            <div class="emails_indicators">
+              <input type="checkbox" name="read">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <span class="emails_subject">Questo è l'oggetto della mail lungo</span>
+            <span class="emails_body">Testo della mail foidijfoifjodjod</span>
+          </div>
+
+        </section>
+      </main>
+
+<!-- C: usato span e css invece di html markup -->
+      <footer><strong>GMail</strong> <em>powered by Boolean</em></footer>
+
+    </div>
+
+  </body>
+</html>

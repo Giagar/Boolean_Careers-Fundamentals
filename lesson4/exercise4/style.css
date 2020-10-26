@@ -1,0 +1,89 @@
+/* ---- general */
+:root {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* q6 */
+.emails-highlighted {
+  background-color: lightgrey !important;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  background-image: url(https://ssl.gstatic.com/ui/v1/icons/mail/themes/desk/bg2_1920x1200.jpg);
+  color: white;
+}
+
+/* ----- header */
+header, #unreadEmails, #emails {
+  border-bottom: 2px solid lightgrey;
+}
+
+header, #searchEmails, #unreadEmails, #emails, footer {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+header h1 {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* ---- form */
+#searchEmails input {
+  padding: 1px;
+  margin-right: 2px;
+}
+
+/* ---- section unreadEmail */
+#unreadEmails_counter {
+  background-color: orange;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+/* ---- section emails */
+.emails_container {
+  padding: 5px;
+  border: 1px solid darkgrey;
+  margin-bottom: 2px;
+  color: black;
+  background: white;
+}
+
+.emails_indicators {
+  width: 5%;
+  display: inline-block;
+}
+
+.emails_indicators i {
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+
+.emails_subject {
+  display: inline-block;
+  width: 25%;
+}
+
+.emails_body {
+  display: inline-block;
+  width: 68%;
+  color: grey;
+}
+
+/* ---- footer */
+footer {
+  text-align: center;
+}

@@ -1,0 +1,67 @@
+:root {
+  font-size: 16px;
+  --header-height: 10vh;
+  --footer-height: 5vh;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 400px;
+  border: 1px solid lightgrey;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header {
+  background: yellow;
+  /* centrare contenuto */
+  height: var(--header-height);
+  line-height: var(--header-height);
+  text-align: center;
+}
+
+main {
+  background: grey;
+}
+
+main:after {
+  content:"";
+  display: table;
+  clear: both;
+}
+
+.section-left, .section-right {
+  width: 25%;
+  float:left;
+}
+
+.section-left {
+  background: blue;
+
+}
+
+.section-center {
+  background: orange;
+  width: 50%;
+  float:left;
+}
+
+.section-right {
+  background: green;
+}
+
+footer {
+  height: var(--footer-height);
+  line-height: var(--footer-height);
+  background: yellow;
+  text-align: center;
+}

@@ -1,0 +1,82 @@
+/* ---- General */
+:root {
+  font-size: 16px;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  background: lightgrey;
+  height: 0.2rem;
+  border: none;
+  margin: 0.35rem 0;
+}
+
+.read {
+  background: lightgrey !important;
+}
+
+body {
+  background-image: url(https://ssl.gstatic.com/ui/v1/icons/mail/themes/desk/bg2_1920x1200.jpg);
+  color: white;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0.4rem;
+}
+
+/* ---- Header */
+header > h1 {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+/* ---- Nav */
+nav input {
+  padding: 0.2rem;
+}
+
+nav .emails_counter {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0.2rem;
+}
+
+nav .emails_counter span {
+  background: orange;
+  border-radius: 50%;
+  padding: 0.1rem;
+}
+
+/* ---- Main */
+.emails_row {
+  color: black;
+  background: white;
+  border: 1px solid darkgrey;
+  margin: 0.2rem 0;
+}
+
+.emails_col_subject, .emails_col_body {
+  display: inline-block;
+}
+
+.emails_col_subject {
+  width: 30%;
+}
+
+.emails_col_body {
+  width: 69%;
+  color: grey;
+}
+
+/* ---- Footer */
+footer {
+  text-align: center;
+}

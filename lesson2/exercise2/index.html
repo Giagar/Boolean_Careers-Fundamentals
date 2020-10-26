@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercise2</title>
+  </head>
+  <body>
+    <h1>Registrazione sito internet</h1>
+
+    <form action="#" method="post">
+      <!-- nome e cognome -->
+      <input type="text" name="firstName" minlength="2" placeholder="Inserisci il tuo nome" required><br>
+      <input type="text" name="lastName" minlength="2" placeholder="Inserisci il tuo cognome" required><br>
+      <!-- email -->
+      <input type="email" name="email" placeholder="Inserisci la tua email" required><br>
+      <!-- regione -->
+      <select name="region" required><br>
+        <option value="">----</option>
+        <option value="piedmont">Piemonte</option>
+        <option value="lombardy">Lombardia</option>
+        <option value="veneto">Veneto</option>
+        <option value="fvg">Friuli Venezia Giulia</option>
+        <option value="valleAosta">Valle D'Aosta</option>
+        <option value="taa">Trentino Aldo Adige</option>
+      </select> <br>
+      <!-- età -->
+      <input type="radio" name="age" value="underage" required> 0-18
+      <input type="radio" name="age" value="ofAge"> 18+ <br>
+      <!-- termini -->
+      <input type="checkbox" name="terms" required> Accetta i termini e le condizioni <br>
+      <!-- nella correzione ogni input viene messo all'inerno di un div per mandarlo a capo: immagino br non vada bene perché si deve usare solo all'interno di un testo scritto per andare a capo. -->
+      <input type="submit" value="Invia">
+    </form>
+
+  </body>
+</html>

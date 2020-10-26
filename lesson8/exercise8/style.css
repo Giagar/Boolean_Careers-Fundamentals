@@ -1,0 +1,100 @@
+/* ---- General */
+:root {
+  font-style: 16px;
+  --link-color: #3A85D4;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* ---- Header */
+header {
+  --header-height: 20vh;
+  height: var(--header-height);
+}
+
+header .add_picture {
+  color: var(--link-color);
+  font-size: 1rem;
+  font-weight: 600;
+/* avrei determinato h dei vari container semplicemente con il padding, ma per esercitarsi su quanto imparato ho adottato soluzione line-height, definendo precisamente altezza del contenitore e da lì a scendere */
+  height: calc(var(--header-height)/2);
+  line-height: calc(var(--header-height)/2);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  float: left;
+  height: calc(var(--header-height)/2);
+  line-height: calc(var(--header-height)/2);
+}
+
+header .see_all {
+  display: inline-block;
+  float: right;
+  font-size: 1rem;
+  height: calc(var(--header-height)/2);
+  line-height: calc(var(--header-height)/2);
+}
+
+hr {
+  /* non faccio border-color perché rimane una sorta di trasparenza dovuta all'interno dell'hr (prob un semplice div)  */
+  border: none;
+  height: 2px;
+  background: lightgrey;
+}
+
+/* ---- Pictures */
+/* io ragiono in modo diverso, parto dal particolare e il container si costruisce su quello, qui parto dal container e devo fare in modo che il particolare rimanga responsive - mi sembra implichi molto più css */
+.row {
+  padding: 1.5rem 0 0;
+  /* border: 1px solid grey; */
+}
+
+.picture_container {
+  --pic_cont-width: calc(100%/6);
+  width: var(--pic_cont-width);
+  /* height: calc(var(--pic_cont-width)/3*2) !important; */
+  float: left;
+  padding: 0 5px;
+  /* border: 1px solid blue; */
+}
+
+.picture_container img {
+  --img-width: 100%;
+  width: var(--img-width);
+  /* height: var(--img-width) !important; */
+  height: auto;
+}
+
+.picture_container h2, .picture_container h3 {
+  --title-height: 20px;
+  font-size: 0.8rem;
+  height: var(--title-height);
+  line-height: var(--title-height);
+}
+
+.picture_container h3 {
+  font-weight: normal;
+  color: grey;
+}

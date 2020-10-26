@@ -1,0 +1,49 @@
+/* ---- Variables */
+:root {
+  --big_square_side: 150px;
+  --small_square_side: 30px;
+}
+
+/* ---- General */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 1000px;
+  height: 100vh;
+  margin: 0 auto;
+  background: green;
+}
+
+.big_square {
+  width: var(--big_square_side);
+  height: var(--big_square_side);
+  display: inline-block;
+  background: blue;
+}
+
+.small_square {
+  width: var(--small_square_side) ;
+  height: var(--small_square_side) ;
+  background: red;
+}
+
+/* ---- Left square */
+.big_square:first-child {
+  position: relative;
+}
+
+.big_square:first-child .small_square:last-child {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* ---- Right square */
+.big_square:last-child .small_square:last-child {
+  position: relative;
+  left: calc(var(--small_square_side) / 2);
+}

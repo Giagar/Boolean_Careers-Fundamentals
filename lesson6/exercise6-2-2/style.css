@@ -1,0 +1,85 @@
+/* es6-2 con padding al posto di line-height per centrare testo */
+
+
+/* ---- General */
+:root {
+  font-size: 16px;
+/* ?con line-height e height == 1.5rem non funziona l'allinamento verticale? */
+  /* --discount-height: 2.5rem; //non mi serve con soluzione padding */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- Main */
+/* ----Products */
+main {
+  width: 1000px;
+  margin: 0 auto;
+  /* adottato questa soluzione perché non sapevo se potevo farlo responsive */
+  text-align: center;
+}
+
+/* adottato questa soluzione perché non sapevo se potevo farlo responsive */
+.products_row {
+  display: inline-block;
+}
+
+.procuts_row:first-child {
+  margin-bottom: 1rem;
+}
+
+.product_container {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: inline-block;
+}
+
+.product_container img {
+  display: block; /* per evitare margini di inline-block*/
+}
+
+/* ---- Discount */
+.discount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rem;
+  /* height: var(--discount-height); //non mi serve con soluzione padding */
+  text-align: center;
+  /* line-height: var(--discount-height); //non mi serve con soluzione padding */
+}
+
+/* usato questa soluzione per fare pratica con selettori e nell'ottica di dover facilmente cambiare valore e grafica degli sconti */
+.small_discount::after, .super_discount::after {
+  display: inline-block;
+  /* height: 100%; //non mi serve con soluzione padding */
+  width: 100%;
+  padding: 0.5rem 0; /* //aggiunto con soluzione padding */
+}
+
+.small_discount::after {
+  content: "-5%";
+  background: red;
+}
+
+.super_discount::after {
+  content: "-30%";
+  background: green;
+}
+
+/* ---- Favourite */
+.favourite {
+  display: block;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-size: 1.8rem;
+  color: red;
+  line-height: 2.5rem;
+}
